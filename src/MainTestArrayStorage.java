@@ -1,18 +1,19 @@
 import com.resumesave.webapp.model.Resume;
 import com.resumesave.webapp.storage.ArrayStorage;
+import com.resumesave.webapp.storage.Storage;
 
 /**
  * Test for your com.resumesave.webapp.storage.ArrayStorage implementation
  */
 public class MainTestArrayStorage {
-    static final ArrayStorage ARRAY_STORAGE = new ArrayStorage();
+    private static final Storage ARRAY_STORAGE = new ArrayStorage();
 
     public static void main(String[] args) {
-        Resume r1 = new Resume();
+        final Resume r1 = new Resume();
         r1.uuid = "uuid1";
-        Resume r2 = new Resume();
+        final Resume r2 = new Resume();
         r2.uuid = "uuid2";
-        Resume r3 = new Resume();
+        final Resume r3 = new Resume();
         r3.uuid = "uuid3";
 
         ARRAY_STORAGE.save(r1);
