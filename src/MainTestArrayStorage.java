@@ -1,5 +1,8 @@
+import com.resumesave.webapp.model.Resume;
+import com.resumesave.webapp.storage.ArrayStorage;
+
 /**
- * Test for your ArrayStorage implementation
+ * Test for your com.resumesave.webapp.storage.ArrayStorage implementation
  */
 public class MainTestArrayStorage {
     static final ArrayStorage ARRAY_STORAGE = new ArrayStorage();
@@ -24,6 +27,11 @@ public class MainTestArrayStorage {
         printAll();
         ARRAY_STORAGE.delete(r1.uuid);
         printAll();
+
+        r2.setUuid("uuid4");
+        ARRAY_STORAGE.update(r2);
+        printAll();
+
         ARRAY_STORAGE.clear();
         printAll();
 
